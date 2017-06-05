@@ -1,0 +1,9 @@
+compile:
+  pre:
+    - autoreconf -i
+  override:
+    - ./configure
+    - make
+test:
+  override:
+    - make check GTEST_OUTPUT="xml:tests/"
