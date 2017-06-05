@@ -5,5 +5,7 @@ compile:
     - ./configure
     - make
 test:
+  pre:
+    - mkdir -p "$CIRCLE_TEST_REPORTS/junit"
   override:
-    - make check GTEST_OUTPUT="xml:tests/"
+    - make check GTEST_OUTPUT="xml:$CIRCLE_TEST_REPORTS/junit/"
