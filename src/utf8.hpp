@@ -10,7 +10,7 @@
 namespace t0946 {
 namespace utf8 {
 
-int CountLeadingOnes(uint8_t n) {
+inline int CountLeadingOnes(uint8_t n) {
   uint8_t cnt = 0;
   if ((n & 0xf0) == 0xf0) { cnt += 4; n <<= 4; }
   if ((n & 0xc0) == 0xc0) { cnt += 2; n <<= 2; }
@@ -19,11 +19,11 @@ int CountLeadingOnes(uint8_t n) {
   return cnt;
 }
 
-uint8_t LeadingOnes(int n) {
+inline uint8_t LeadingOnes(int n) {
   return (0xff00 >> n) & 0xff;
 }
 
-int UTF8Length(uint32_t n) {
+inline int UTF8Length(uint32_t n) {
   if ((n >> 7) == 0) return 1;
   if ((n >> 11) == 0) return 2;
   if ((n >> 16) == 0) return 3;
