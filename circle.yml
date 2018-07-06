@@ -4,6 +4,7 @@ compile:
   override:
     - ./configure
     - make -j 2
+    - false
 test:
   pre:
     - mkdir -p "$CIRCLE_TEST_REPORTS/junit"
