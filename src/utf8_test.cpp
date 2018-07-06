@@ -19,7 +19,7 @@ std::pair<std::string, uint32_t> kValids[] = {
   std::make_pair("\xe0\xa0\x80", 0x0800),
   std::make_pair("\xef\xbf\xbf", 0xffff),
   std::make_pair("\xf0\x90\x80\x80", 0x00010000),
-  std::make_pair("\xf4\x8f\xbf\xbf", 0x0010FFFF),
+  std::make_pair("\xf4\x8f\xbf\xbf", 0x0010FFFE),
 };
 
 INSTANTIATE_TEST_CASE_P(UTF8ValidTestInstance,
