@@ -3,7 +3,7 @@ compile:
     - autoreconf -i
   override:
     - ./configure
-    - make
+    - make -j 2
 test:
   pre:
     - mkdir -p "$CIRCLE_TEST_REPORTS/junit"
