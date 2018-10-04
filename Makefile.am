@@ -33,6 +33,11 @@ tests_utf8_test_SOURCES= src/utf8_test.cpp
 tests_utf8_test_LDADD= -lpthread objs/libgtest.la
 cpp_sources+=$(tests_utf8_test_SOURCES)
 
+check_PROGRAMS+= tests/min_max_queue_test
+tests_min_max_queue_test_SOURCES= src/min_max_queue_test.cpp
+tests_min_max_queue_test_LDADD= -lpthread objs/libgtest.la
+cpp_sources+=$(tests_min_max_queue_test_SOURCES)
+
 TESTS= $(check_PROGRAMS)
 
 check-local:
